@@ -20,6 +20,13 @@ body {
   font-size: 24px;
 }
 
+.container {
+  display: flex;
+  background-color: #f4f1ec;
+  flex-direction: column;
+  padding: 0 5%;
+  align-items: center;
+}
 
 
 /*
