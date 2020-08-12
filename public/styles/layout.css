@@ -24,11 +24,51 @@ body {
   display: flex;
   background-color: #f4f1ec;
   flex-direction: column;
-  padding: 0 5%;
-  align-items: center;
+  padding: 20px;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.tweet {
+  background-color: #f4f1ec;
+  margin: 5rem 0 5rem 0;
+  border: 1px solid black;
+}
+
+.tweet header {
+  display: flex;
+  background-color: #f4f1ec;
+  justify-content: space-between;
+  height: auto;
+  align-items: flex-start;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.tweet-profile{
+  display: flex;
+}
+
+.tweet p {
+  background-color: #f4f1ec;
+  margin: 0 1em 0 1em;
+}
+
+.tweet-profile-img {
+  display: inline-block;
+}
+
+.tweet footer {
+  border: none;
+  border-top: 1px solid black;
+  background: transparent;
+  margin: 0 1em 0 1em;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+
+

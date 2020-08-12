@@ -7,6 +7,8 @@ const tweetsRoutes  = express.Router();
 
 module.exports = function(DataHelpers) {
 
+  
+
   tweetsRoutes.get("/", function(req, res) {
     DataHelpers.getTweets((err, tweets) => {
       if (err) {
@@ -31,6 +33,9 @@ module.exports = function(DataHelpers) {
       },
       created_at: Date.now()
     };
+
+    console.log('req.body.text', req.body.text);
+    console.log('tweet', tweet);
 
     DataHelpers.saveTweet(tweet, (err) => {
       if (err) {
