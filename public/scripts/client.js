@@ -28,66 +28,84 @@ const data = [
       "text": "Je pense , donc je suis"
     },
     "created_at": 1461113959088
+  },
+  {
+    "user": {
+      "name": "Einstein",
+      "avatars": "https://i.imgur.com/73hZDYK.png",
+        "handle": "@emc2"
+      },
+    "content": {
+        "text": "Imagination is more important than knowledge."
+      },
+    "created_at": 1461116212345
   }
 ]
 
 const tweetData = {
   "user": {
-    "name": "Newton",
+    "name": "Einstein",
     "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
+      "handle": "@emc2"
     },
   "content": {
-      "text": "If I have seen further it is by standing on the shoulders of giants"
+      "text": "Imagination is more important than knowledge."
     },
-  "created_at": 1461116232227
+  "created_at": 1461116212345
 }
 
 const renderTweets = function(tweets) {
-// loops through tweets
+  // loops through tweets
+  // iterate through the array
+  for (const tweet of tweets) {
+    console.log('renderTweets tweet:' , tweet);
+    createTweetElement(tweet);
+  // // turn each object into an LI
+  //       const $li = $('<li>').text(recipe.title); // <li>recipe.title</li>
+  //       // append each LI to the UL in the DOM
+  //       
+  } 
 
-// calls createTweetElement for each tweet
+  // calls createTweetElement for each tweet
 // takes return value and appends it to the tweets container
+// $ul.append($li);
 }
 
+// MENTOR QUESTION: how do insert tweet object properties into the HTML result?
 const createTweetElement = function(tweet) {
   //let $tweet = /* Your code for creating the tweet element */
   //const $tweet = $(`<article class="tweet-section">Hello world</article>`);
+  console.log('createTweetElement tweet:', tweet);
   const $tweet = $(`
   <article class="tweet">
         <header>
           <div class='tweet-profile'>
-            <img class="tweet-profile-img" src="avatars">
-            <h3>user.name</h3>
+            <img class="tweet-profile-img" src="https://i.imgur.com/73hZDYK.png">
+            <h3>${tweet.user.name}</h3>
         </div>
-        <p>user.handle</p>
+        <p>${tweet.user.handle}</p>
         </header>
-        <p class='tweet-section'>content</p>
+        <p class='tweet-section'>${tweet.content.text}</p>
         <footer>
-          <p>created_at</p>
+          <p>${tweet.created_at}</p>
           <div><i>icon1</i><i>icon2</i><i>con3</i></div>
         </footer>
       </article>
   `);
-  console.log('createTweetElement:', $tweet);
+  console.log('createTweetElement $tweet:', $tweet);
+  $('.container').append($tweet);
   // ...
   return $tweet;
 }
 
 renderTweets(data);
 
-// MENTOR QUESTION: should the driver code live inside the document ready function?
-// ================
+
 // Test / driver code (temporary). Eventually will get this from the server.
-
-
-const $tweet = createTweetElement(tweetData);
-
-// MENTOR QUESTION: Want to see tweet data in console but seems to loading before document loaded. Also, let's put something on the index.html page too.
-// ================
+//const $tweet = createTweetElement(tweetData);
 // Test / driver code (temporary)
-console.log('$tweet:', $tweet); // to see what it looks like
-$('.container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+//console.log('$tweet:', $tweet); // to see what it looks like
+//$('.container').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
 
 });
 
