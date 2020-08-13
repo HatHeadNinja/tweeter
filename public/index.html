@@ -50,7 +50,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form action="/tweets" method="POST">
+        <form>
           <label for="tweet-text">What are you humming about?</label>
           <input 
             type="textarea" 
@@ -70,22 +70,7 @@
           </div>
         </form>
       </section>
-      <!--MENTOR QUESTION: Should I create a named section?-->
-      <!--OLD STUFF BELOW-->
-      <!-- <article class="tweet">
-        <header>
-          <div class='tweet-profile'>
-            <img class="tweet-profile-img" src="https://i.imgur.com/nlhLi3I.png">
-            <h3>Aldous Huxley</h3>
-        </div>
-        <p>@Huxley</p>
-        </header>
-        <p class='tweet-section'>This is the tweet section!</p>
-        <footer>
-          <p>timestamp</p>
-          <div><i>icon1</i><i>icon2</i><i>con3</i></div>
-        </footer>
-      </article> -->
+      <div id="tweets"></div>
     </main>
   </body>
 </html>
