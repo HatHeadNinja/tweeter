@@ -17,6 +17,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script src="https://kit.fontawesome.com/8e24f3e713.js" crossorigin="anonymous"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -50,6 +51,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div id="error"><div class="fas fa-exclamation-circle"></div>&nbsp More than 140 characters! Try saying more with less...</div>
         <form>
           <label for="tweet-text">What are you humming about?</label>
           <input 

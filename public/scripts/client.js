@@ -69,41 +69,6 @@ $(() => {
       });
   });
 
-  loadTweets();  //good!
+  loadTweets();
 
 });
-
-
- // OLD STUFF
-  /*   const renderTweets = function(tweets) {
-      // loops through tweets
-      // iterate through the array
-      for (const tweet of tweets) {
-        console.log('renderTweets tweet:' , tweet);
-        createTweetElement(tweet);
-      } 
-    } */
-
-// OLD STUFF
-/* const newTweet = `<article class="tweet">
-    <header>
-      <div>
-        <img src="/images/profile-hex.png">
-        <h3>${user.name}</h3>
-      </div>
-      <p>${user.handle}</p>
-    </header>
-    <p>${content}</p>
-    <footer>
-      <p>${created_at}</p>
-      <div>
-        <i class="fas fa-flag"></i>
-        <i class="fa fa-retweet" aria-hidden="true"></i>
-        <i class="fa fa-heart" aria-hidden="true"></i>
-      </div>
-    </footer>
-  </article>` */
-
-
-
-  

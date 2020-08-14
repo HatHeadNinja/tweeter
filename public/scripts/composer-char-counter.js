@@ -1,21 +1,15 @@
 $(document).ready(function() {
 
-  console.log('document ready!');
+  // console.log('document ready!');
 
   let alerted;
   
-  // $('#tweet-text').on('keypress', () => console.log(($(this).val())));
-
   $('#tweet-text').on('blur', function(){ 
     let charCount = $(this).val().length;
-    // only enable tweet button when below 141 char
-    //console.log('blur', charCount);
   });
 
   $('#tweet-text').on('change', function(){ 
     let charCount = $(this).val().length;
-    // only enable tweet button when below 141 char
-    //console.log('blur', charCount);
   });
 
   $('#tweet-text').on('keyup', function(){ 
@@ -24,27 +18,41 @@ $(document).ready(function() {
       $('.counter').val(140);
       $('#new-tweet-button').prop("disabled", true);
       $('#new-tweet-button').css("background-color", "grey");
-      console.log('=== 0 keyup charCount:', charCount, 'alerted', alerted);
+      // console.log('=== 0 keyup charCount:', charCount, 'alerted', alerted);
     } else if (charCount > 0 && charCount < 140 ) {
         $('.counter').val(charCount);
         alerted = false;
         $('#new-tweet-button').prop("disabled", false);
         $('#new-tweet-button').css("background-color", "blue");
-        console.log('> 140 < 0 keyup charCount:', charCount, 'alerted', alerted);
+        $('#error').css("display","none");
+        //// console.log('> 140 < 0 keyup charCount:', charCount, 'alerted', alerted);
     } else if (charCount === 140 && alerted === false){
-        //MENTOR QUESTION: can I user a promise to wait for keyup?
         $('.counter').val(charCount);
         $('#new-tweet-button').prop("disabled", false);
         $('#new-tweet-button').css("background-color", "grey");
         alerted = true;
-        console.log('===140 keyup charCount:', charCount, 'alerted', alerted);
-        alert('WHOA! You have exceeded the 140 character limit. Please try to be more concise.');
+        // console.log('===140 keyup charCount:', charCount, 'alerted', alerted);
+        errorMsg('WHOA! Too many characters! Conciseness is the new cool!');
+        //$('#error').css("display","flex");
+        //$('tweet-text').css("border-bottom", "red");
     } else if (charCount > 140) {
         charCount = 140 - charCount;
         $('.counter').val(charCount);
         $('#new-tweet-button').prop("disabled", true);
         $('#new-tweet-button').css("background", "grey");
-        console.log('< 140 keyup charCount:', charCount, 'alerted', alerted);
+        $('#error').css("display","flex");
+        $('tweet-text').css("border-bottom", "1px solid red");
+        // console.log('< 140 keyup charCount:', charCount, 'alerted', alerted);
     }
   });
+  function errorMsg (errMsg){
+    // console.log('errMsg',errMsg);
+    if ( $( "#error" ).first().is( ":hidden" ) ) {
+      $( "#error" ).slideDown( "slow" );
+      $( "#error" ).val(errMsg);
+    } else {
+      $( "#error" ).hide();
+    }
+  }
+  
 });
