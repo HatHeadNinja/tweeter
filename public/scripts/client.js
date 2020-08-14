@@ -5,6 +5,12 @@
  */
 $(() => {
 
+  const escape =  function(str) {
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  }
+
   // render tweet array according to format
   const renderTweets = (tweets) => {
     $('#tweets').empty();
@@ -13,6 +19,7 @@ $(() => {
     })
   }
  
+  // create HTML with tweet data
   const createTweetElement = function(tweet) {
     console.log('createTweetElement tweet:', tweet);
     const $tweet = $(`
@@ -24,7 +31,7 @@ $(() => {
           </div>
           <p>${tweet.user.handle}</p>
           </header>
-          <p class='tweet-section'>${tweet.content.text}</p>
+          <p class='tweet-section'>${escape(tweet.content.text)}</p>
           <footer>
             <p>${tweet.created_at}</p>
             <div><i>icon1</i><i>icon2</i><i>con3</i></div>
@@ -32,7 +39,6 @@ $(() => {
       </article>
     `);
     console.log('createTweetElement $tweet:', $tweet);
-    //$('.container').append($tweet);
     return $tweet;
   }
 
@@ -40,25 +46,26 @@ $(() => {
   const loadTweets = () => {
     $.ajax('http://localhost:8080/tweets', {method: 'GET'})
       .then((data) => {
-        console.log('42 loadTweets data:', data)
+        console.log('loadTweets data:', data)
         renderTweets(data)
       })
     };
 
-  
   const $form = $('.new-tweet form');
   $form.on('submit', (event) => {
     event.preventDefault();
+    console.log('$form:', $form);
+    $("#tweet-text").text($form);
     const serialized = $form.serialize();
-    console.log(serialized);
+    console.log('$form serialized:', serialized);
 
     $.post(`/tweets`, serialized)
       .then((tweet) => {
-        //console.log('56', tweet);
-        //createTweetElement(tweet);
         loadTweets();
         $('#tweet-text').val('').focus();
         $('#counter').val('140');
+        $('#new-tweet-button').prop("disabled", true);
+        $('#new-tweet-button').css("background-color", "grey");
       });
   });
 
