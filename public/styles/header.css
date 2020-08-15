@@ -9,3 +9,23 @@ header {
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */;
 }
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  header {
+    /* display: flex; */
+    /* top: 120px; */
+    margin: 20px;
+    /* margin-top: 140px; */
+    height: 400px;
+    position: fixed;
+    flex-direction: column;
+    width: 20%;
+    align-items: center;
+    padding: 20px;
+    justify-content: center;
+    background-color: orange;
+    /* background-color: #b34e00; */
+    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+  }
+}

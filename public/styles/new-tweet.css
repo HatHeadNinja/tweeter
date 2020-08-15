@@ -43,3 +43,12 @@
   justify-content: flex-start;
 }
 
+ /* Laptops / Desktops: minimum width of 1024px */
+ @media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+  .new-tweet {
+    /* display: none; */
+    width: 72%;
+  }
+
+ }

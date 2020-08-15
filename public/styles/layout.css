@@ -72,10 +72,31 @@ body {
  /* Laptops / Desktops: minimum width of 1024px */
  @media only screen and (min-width: 1024px) {
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
-  body {
-    display: flex ;
- 
+
+
+  /* header {
+    display: none;
+  } */
+  body{
+    display: flex;
+    flex-direction: row;
   }
+
+  main {
+    /* display: none; */
+  }
+  .container {
+    /* display: none; */
+    align-items: flex-end;
+    margin-top: 200px;
+    width: 100%;
+    
+  }
+
+  #tweets {
+    width: 72%;
+  }
+
 }
 
 

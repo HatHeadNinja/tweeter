@@ -21,3 +21,9 @@ nav {
   position: fixed;
   top: 0;
 }
+
+/* Laptops / Desktops: minimum width of 1024px */
+@media only screen and (min-width: 1024px) {
+  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
+
+}
