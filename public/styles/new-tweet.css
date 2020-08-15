@@ -27,6 +27,11 @@
   justify-content: space-between;
 }
 
+.new-tweet form label {
+  font-family: 'source sans pro', cursive;
+  margin-right: 10px;
+}
+
 .new-tweet #tweet-text {
   border: none;
   border-bottom: 1px solid black;
@@ -43,12 +48,24 @@
   justify-content: flex-start;
 }
 
+#counter {
+  font-family: "Bungee", sans-serif;
+  color: darkgray;
+}
+
  /* Laptops / Desktops: minimum width of 1024px */
  @media only screen and (min-width: 1024px) {
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
   .new-tweet {
     /* display: none; */
     width: 72%;
+    margin-bottom: 40px;
+    margin-right: 10px;
+  }
+
+  #counter {
+    font-family: "Bungee", sans-serif; 
+    /* color: darkgray; */
   }
 
  }

@@ -24,12 +24,12 @@ $(() => {
     console.log('createTweetElement tweet:', tweet);
     const $tweet = $(`
       <article class="tweet">
-          
-            <div class='tweet-profile'>
-              <img class="tweet-profile-img" src=${tweet.user.avatars}>
-              <h3>${tweet.user.name}</h3>
+          <div class='tweet-profile'>
+            <img class="tweet-profile-img" src=${tweet.user.avatars}>
+            <h3>${tweet.user.name}</h3>
+            <p>${tweet.user.handle}</p>
           </div>
-          <p>${tweet.user.handle}</p>
+          
         
           <p class='tweet-section'>${escape(tweet.content.text)}</p>
           <footer>

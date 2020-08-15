@@ -12,7 +12,7 @@ nav {
   height: 120px;
   background-color: #4056A1;
   color: #FFFFFF;
-  display: flex;
+  display: none;
   align-content: flex-start;
   align-items: baseline;
   justify-content: space-between;
@@ -25,5 +25,9 @@ nav {
 /* Laptops / Desktops: minimum width of 1024px */
 @media only screen and (min-width: 1024px) {
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
-
+  nav {
+    position: fixed;
+    display: flex;
+    font-size: xx-large;
+  }
 }

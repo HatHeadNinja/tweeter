@@ -33,8 +33,9 @@ body {
 
 .tweet {
   background-color: #f4f1ec;
-  margin: 5rem 0 5rem 0;
+  margin: 2rem 0 2rem 0;
   border: 1px solid black;
+  padding: 20px;
 }
 
 .tweet header {
@@ -47,13 +48,24 @@ body {
   padding: 10px;
 }
 
-.tweet-profile{
+.tweet-profile {
   display: flex;
+  color: dimgray;
+}
+
+.tweet h3 {
+  padding-left: 20px;
 }
 
 .tweet p {
   background-color: #f4f1ec;
-  margin: 0 1em 0 1em;
+  font-family: 'source sans pro', cursive;
+  color: dimgray;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 60%;
+  justify-content: flex-end; */
 }
 
 .tweet-profile-img {
@@ -64,7 +76,7 @@ body {
   border: none;
   border-top: 1px solid black;
   background: transparent;
-  margin: 0 1em 0 1em;
+  /* margin: 0 1em 0 1em; */
   display: flex;
   justify-content: space-between;
 }
@@ -73,28 +85,17 @@ body {
  @media only screen and (min-width: 1024px) {
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
 
-
-  /* header {
-    display: none;
-  } */
-  body{
-    display: flex;
-    flex-direction: row;
-  }
-
-  main {
-    /* display: none; */
-  }
   .container {
     /* display: none; */
     align-items: flex-end;
-    margin-top: 200px;
+    margin-top: 120px;
     width: 100%;
     
   }
 
   #tweets {
     width: 72%;
+    margin-right: 10px;
   }
 
 }
