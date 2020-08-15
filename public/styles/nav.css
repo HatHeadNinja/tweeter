@@ -14,12 +14,19 @@ nav {
   color: #FFFFFF;
   display: none;
   align-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 1.5em;
   position: fixed;
   top: 0;
+}
+
+
+
+nav p {
+  font-family: 'source sans pro', cursive;
+  font-size: 20px;
 }
 
 /* Laptops / Desktops: minimum width of 1024px */

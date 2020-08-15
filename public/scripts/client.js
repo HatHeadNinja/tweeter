@@ -27,7 +27,7 @@ $(() => {
           <div class='tweet-profile'>
             <img class="tweet-profile-img" src=${tweet.user.avatars}>
             <h3>${tweet.user.name}</h3>
-            <p>${tweet.user.handle}</p>
+            <p class="user-handle">${tweet.user.handle}</p>
           </div>
           
         

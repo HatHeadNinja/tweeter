@@ -50,11 +50,26 @@ body {
 
 .tweet-profile {
   display: flex;
-  color: dimgray;
+  color: lightgray;
 }
 
 .tweet h3 {
   padding-left: 20px;
+  font-size: 23px;
+  color: darkgray;
+  width: 300px;
+}
+
+.tweet-profile p {
+  justify-content: flex-end;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: lightgray;
+}
+
+.tweet .user-handle {
+  color: lightgray
 }
 
 .tweet p {
