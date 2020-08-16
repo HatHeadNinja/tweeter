@@ -29,12 +29,12 @@ $(() => {
             <h3>${tweet.user.name}</h3>
             <p class="user-handle">${tweet.user.handle}</p>
           </div>
-          
-        
           <p class='tweet-section'>${escape(tweet.content.text)}</p>
           <footer>
-            <p>${tweet.created_at}</p>
-            <div><i>icon1</i><i>icon2</i><i>con3</i></div>
+            <p>${moment(tweet.created_at).toNow(true)} ago</p>
+            <div class="tweet-icons"><span class="fa fa-flag"></span>
+            <span class="fa fa-retweet"></span>
+            <span class="fa fa-heart"></span></div>
           </footer>
       </article>
     `);

@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
 }
+
 .new-tweet textarea {
   background: transparent;
   resize: none;
@@ -20,6 +21,7 @@
   background-color: grey;
   padding: 0 1rem;
   font-family: 'Bungee', cursive;
+  font-size: initial;
 }
 
 .new-tweet div {
@@ -27,9 +29,10 @@
   justify-content: space-between;
 }
 
-.new-tweet form label {
+.new-tweet form #tweet-label {
   font-family: 'source sans pro', cursive;
   margin-right: 10px;
+  /* margin-bottom: 10px; */
 }
 
 .new-tweet #tweet-text {

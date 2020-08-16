@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
+    
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     
     <!-- External JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8e24f3e713.js" crossorigin="anonymous"></script>
 
@@ -41,15 +42,15 @@
     <nav>
       <span>Tweeter</span>
       <div>
-        <p>Write a new tweet</p>
-        <i class="fas fa-angle-double-down"></i>
+        <p><b>Write</b> a new tweet</p>
+        <div class="arrow bounce"><i class="fas fa-angle-double-down"></i></div>
       </div>
     </nav>
     <header>
       <div class='avatar'>
           <img src="/images/profile-hex.png"> 
       </div>
-      <div class='user-name'>
+      <div id='user-name'>
           <h2><b>Amy</b> Mansell</h2>
       </div>
     </header>
@@ -59,7 +60,7 @@
       <section class="new-tweet">
         <div id="error"><div class="fas fa-exclamation-circle"></div>&nbsp More than 140 characters! Try saying more with less...</div>
         <form>
-          <label for="tweet-text">What are you humming about?</label>
+          <label id="tweet-label" for="tweet-text">What are you humming about?</label>
           <input 
             type="textarea" 
             name="text" 

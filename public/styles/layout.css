@@ -96,6 +96,18 @@ body {
   justify-content: space-between;
 }
 
+.tweet footer p {
+  margin-top: 10px;
+  font-size: initial;
+  font-style: italic;
+}
+
+.tweet .tweet-icons {
+  margin-top: 10px;
+  color: lightgray;
+  font-size: medium;
+}
+
  /* Laptops / Desktops: minimum width of 1024px */
  @media only screen and (min-width: 1024px) {
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
