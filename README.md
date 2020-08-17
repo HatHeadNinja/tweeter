@@ -20,4 +20,6 @@ md5: v2.1.0
 moment: 2.27.0
 
 ## Screenshots
+![Desktop](https://github.com/HatHeadNinja/tweeter/blob/master/docs/desktop.png)
+![Mobile](https://github.com/HatHeadNinja/tweeter/blob/master/docs/mobile.png)
 
