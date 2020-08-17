@@ -72,8 +72,6 @@ body {
   color: lightgray
 }
 
-
-
 .tweet p {
   background-color: #f4f1ec;
   font-family: 'source sans pro', cursive;
@@ -106,8 +104,12 @@ body {
 
 .tweet .tweet-icons {
   margin-top: 10px;
-  color: lightgray;
-  font-size: medium;
+  color: lightsteelblue;
+  font-size: 14px;
+}
+
+.tweet .tweet-icons:hover {
+  color: #4056A1;
 }
 
  /* Laptops / Desktops: minimum width of 1024px */

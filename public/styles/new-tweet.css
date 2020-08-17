@@ -25,7 +25,7 @@
 
 .new-tweet div {
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
 .new-tweet form #tweet-label {
@@ -39,6 +39,10 @@
   border-bottom: 1px solid black;
   background: transparent;
   margin-top: 10px;
+}
+
+.new-tweet form hr {
+  margin-bottom: 0px;
 }
 
 .new-tweet #error {
@@ -55,7 +59,6 @@
 #counter {
   font-family: "Bungee", sans-serif;
   color: darkgray;
-  padding-right: 20px;
 }
 
  /* Laptops / Desktops: minimum width of 1024px */
