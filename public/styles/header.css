@@ -17,6 +17,10 @@ header img {
   margin-top: 4%;
 }
 
+header .avatar-name {
+  text-align: center;
+}
+
 header #account-name h2 {
   font-weight: normal;
   text-align: center;
@@ -27,8 +31,8 @@ header #account-name p {
   text-align: end;
 }
 
-header #account-name hr {
-  border-top: 1px dotted darkorange;
+header div #account-name hr {
+  display: none;
 }
 
 /* Laptops / Desktops: minimum width of 1024px */
@@ -43,7 +47,11 @@ header #account-name hr {
     padding: 20px;
     justify-content: center;
     background-color: orange;
-    /* background-color: #b34e00; */
-    background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
+    /* background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png"); */
   }
+}
+
+header #account-name hr {
+  display: flex;
+  border-top: 1px dotted darkorange;
 }

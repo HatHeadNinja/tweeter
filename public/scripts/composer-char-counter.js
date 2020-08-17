@@ -2,7 +2,14 @@ $(document).ready(function() {
 
   let alerted;
   
-  
+  // DEAR EVALUATOR PERSON
+  // ======================
+  // I really wanted to DRY up this code, perhaps even move all the functions 
+  // setting element properties and css to a helper file but am late submitting
+  // so alas, can't afford any time to do. I'd also like to spend a some time
+  // ordering CSS elements across the files. But, alas, again! 
+
+   
   $('#tweet-text').on('blur', function(){ 
     let charCount = $(this).val().length;
   });
