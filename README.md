@@ -1,6 +1,21 @@
 # About This Project
 This project was part of Lighthouse Labs web developer bootcamp
 
+# Notes to Evaluator
+Hello, I have commented some notes in my code, but this is a better place got them!
+
+I really wanted to DRY up some code and make it more modular, particularly client.js and composer-char-counter, by moving all the repetitive functions setting element properties and css to a helper file but am late submitting this project so alas, can't afford any time to do right now. I'd also like to spend a some time ordering CSS elements across the files. But, alas, again, out of time.
+
+I do plan to come back to this project because the US requirements are sub-standard and if I am to show potential employers, these shortcomings must be addressed first.
+
+These US shortcomings include:
+* Use of red in nav for animated arrows. Red is for errors. Studies demonstrate that orange is the top performing CTA colour
+* Starts input character counter at 140 when in fact there are 0 characters in the input field, (I used a ‘n / 140’ for a counter, so that the user knows how many characters they have left)
+* Submit button should just be disabled when input <1 && input > 140. Using hover-over tool tip over submit button when 0 characters is better than a scary error message (Twitter doesn’t even do a tool tip, just disabled button)
+* ‘Write a new tweet’ CTA in mobile view nav bar is too far from the main content to be effective
+* The ‘What are you humming about?’ label can be reused for the error message and changed to red (and changed back when characters between 0 and 140) Far less jarring
+* Instead of having the tweet button to the far left of the input field, it would be better placed on the far right, preceded by the character counter. Not only would this reduce mouse movement, especially in desktop display, and keep the user more focused, it would line the button up to where the CTA in the nav bar is pointing.
+
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
