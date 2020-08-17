@@ -2,7 +2,7 @@
 This project was part of Lighthouse Labs web developer bootcamp
 
 # Notes to Evaluator
-Hello, I have commented some notes in my code, but this is a better place got them!
+Hello, I have commented some notes in my code, but this is a better place for them!
 
 I really wanted to DRY up some code and make it more modular, particularly client.js and composer-char-counter, by moving all the repetitive functions setting element properties and css to a helper file but am late submitting this project so alas, can't afford any time to do right now. I'd also like to spend a some time ordering CSS elements across the files. But, alas, again, out of time.
 
