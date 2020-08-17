@@ -9,7 +9,6 @@
   border-width: 0 0 3px 0;
   outline: none;
   border-color: black;
-  margin: 1rem 0;
 }
 .new-tweet footer {
   display: flex;
@@ -26,7 +25,7 @@
 
 .new-tweet div {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 
 .new-tweet form #tweet-label {
@@ -39,21 +38,24 @@
   border: none;
   border-bottom: 1px solid black;
   background: transparent;
+  margin-top: 10px;
 }
 
 .new-tweet #error {
   display: none;
   color: red;
-  border: 2px solid red;
-  padding: 10px 10px;
-  margin-bottom: 20px;
-  background-color: linen;
+  border: 1px none red;
   justify-content: flex-start;
+  padding: 0;
+  border: 1px none;
+  background-color: #f4f1ec;
+  margin-bottom: 0px;
 }
 
 #counter {
   font-family: "Bungee", sans-serif;
   color: darkgray;
+  padding-right: 20px;
 }
 
  /* Laptops / Desktops: minimum width of 1024px */

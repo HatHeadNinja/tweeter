@@ -13,12 +13,22 @@ header {
 }
 
 header img {
-  width: 100%;
+  width: 90%;
+  margin-top: 4%;
 }
 
-header #user-name h2 {
+header #account-name h2 {
   font-weight: normal;
   text-align: center;
+}
+
+header #account-name p {
+  color: whitesmoke;
+  text-align: end;
+}
+
+header #account-name hr {
+  border-top: 1px dotted darkorange;
 }
 
 .arrow {
@@ -47,7 +57,7 @@ header #user-name h2 {
 @media only screen and (min-width: 1024px) {
   header {
     margin: 20px;
-    height: 400px;
+    height: 45%;
     position: fixed;
     flex-direction: column;
     width: 20%;

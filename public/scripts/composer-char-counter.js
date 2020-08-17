@@ -2,6 +2,7 @@ $(document).ready(function() {
 
   let alerted;
   
+  
   $('#tweet-text').on('blur', function(){ 
     let charCount = $(this).val().length;
   });
@@ -16,7 +17,8 @@ $(document).ready(function() {
       $('.counter').val('0 / 140');
       $('#new-tweet-button').prop("disabled", true);
       $('#new-tweet-button').css("background-color", "grey");
-      $('#tweet-label').css("display", "flex") 
+      $('#tweet-label').css("display", "flex")
+      $('#error').css("display","none");
       
     } else if (charCount > 0 && charCount < 140 ) { 
         $('.counter').val(charCount + ' / 140');
@@ -31,6 +33,7 @@ $(document).ready(function() {
         $('.counter').css("color", "darkgoldenrod");
         $('.counter').val(charCount + ' / 140');
         $('#tweet-label').css("display", "flex") 
+        $('#error').css("display","none");
 
     } else if (charCount === 140 && alerted === false){ 
         $('.counter').css("color", "crimson");
