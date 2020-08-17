@@ -26,6 +26,7 @@ $(document).ready(function() {
       $('#new-tweet-button').css("background-color", "grey");
       $('#tweet-label').css("display", "flex")
       $('#error').css("display","none");
+      $('.counter').css("color", "darkgray");
       
     } else if (charCount > 0 && charCount < 140 ) { 
         $('.counter').val(charCount + ' / 140');
