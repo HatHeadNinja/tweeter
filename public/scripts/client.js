@@ -9,15 +9,15 @@ $(() => {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
-  }
+  };
 
   // render tweet array according to format
   const renderTweets = (tweets) => {
     $('#tweets').empty();
     tweets.forEach(tweet => {
-      $('#tweets').prepend(createTweetElement(tweet))
-    })
-  }
+      $('#tweets').prepend(createTweetElement(tweet));
+    });
+  };
  
   // create HTML with tweet data
   const createTweetElement = function(tweet) {
@@ -40,16 +40,16 @@ $(() => {
     `);
     console.log('createTweetElement $tweet:', $tweet);
     return $tweet;
-  }
+  };
 
   // load tweets from /tweets location and render them one by one
   const loadTweets = () => {
     $.ajax('http://localhost:8080/tweets', {method: 'GET'})
       .then((data) => {
-        console.log('loadTweets data:', data)
-        renderTweets(data)
-      })
-    };
+        console.log('loadTweets data:', data);
+        renderTweets(data);
+      });
+  };
 
   const $form = $('.new-tweet form');
   $form.on('submit', (event) => {

@@ -10,11 +10,13 @@
   outline: none;
   border-color: black;
 }
+
 .new-tweet footer {
   display: flex;
   justify-content: space-between;
   font-family: "Bungee", sans-serif;
 }
+
 .new-tweet div button {
   color: white;
   background-color: grey;
@@ -75,5 +77,4 @@
     font-family: "Bungee", sans-serif; 
     /* color: darkgray; */
   }
-
  }
