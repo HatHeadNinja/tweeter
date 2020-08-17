@@ -8,7 +8,7 @@ I really wanted to DRY up some code and make it more modular, particularly clien
 
 I do plan to come back to this project because the US requirements are sub-standard and if I am to show potential employers, these shortcomings must be addressed first.
 
-These US shortcomings include:
+These UX shortcomings include:
 * Use of red in nav for animated arrows. Red is for errors. Studies demonstrate that orange is the top performing CTA colour
 * Starts input character counter at 140 when in fact there are 0 characters in the input field, (I used a ‘n / 140’ for a counter, so that the user knows how many characters they have left)
 * Submit button should just be disabled when input <1 && input > 140. Using hover-over tool tip over submit button when 0 characters is better than a scary error message (Twitter doesn’t even do a tool tip, just disabled button)
