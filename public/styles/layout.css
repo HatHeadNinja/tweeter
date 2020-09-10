@@ -30,12 +30,17 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
+ 
 .tweet {
   background-color: #f4f1ec;
   margin: 2rem 0 2rem 0;
   border: 1px solid black;
   padding: 20px;
+}
+  
+.tweet:hover {
+  background-color: ghostwhite;
+  box-shadow: 2px 2px;
 }
 
 .tweet header {
@@ -68,17 +73,19 @@ body {
   color: lightgray;
 }
 
-.tweet:hover {
-  background-color: ghostwhite;
-  box-shadow: 2px 2px;
+.tweet .tweet-profile h3:hover {
+  color: darkblue;
 }
 
 .tweet .user-handle {
   color: darkgray;
 }
 
+.tweet .tweet-profile .user-handle:hover {
+  color: darkblue;
+}
+
 .tweet p {
-  /* background-color: #f4f1ec; */
   font-family: 'source sans pro', cursive;
   color: dimgray;
 }
@@ -107,12 +114,12 @@ body {
   font-size: 14px;
 }
 
-/* .tweet .tweet-icons:hover {
-  color: lightblue;
-} */
+.tweet .tweet-icons:hover {
+  color: darkblue;
+}
 
  /* Laptops / Desktops: minimum width of 1024px */
- @media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {
 
   .container {
     align-items: flex-end;
