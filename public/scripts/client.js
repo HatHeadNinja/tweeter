@@ -38,7 +38,6 @@ $(() => {
           </footer>
       </article>
     `);
-    console.log('createTweetElement $tweet:', $tweet);
     return $tweet;
   };
 
@@ -46,7 +45,6 @@ $(() => {
   const loadTweets = () => {
     $.ajax('http://localhost:8080/tweets', {method: 'GET'})
       .then((data) => {
-        console.log('loadTweets data:', data);
         renderTweets(data);
       });
   };
@@ -54,11 +52,9 @@ $(() => {
   const $form = $('.new-tweet form');
   $form.on('submit', (event) => {
     event.preventDefault();
-    console.log('$form:', $form);
     $("#tweet-text").text($form);
     const serialized = $form.serialize();
-    console.log('$form serialized:', serialized);
-
+    
     $.post(`/tweets`, serialized)
       .then((tweet) => {
         loadTweets();

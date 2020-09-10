@@ -76,11 +76,6 @@ body {
   background-color: #f4f1ec;
   font-family: 'source sans pro', cursive;
   color: dimgray;
-  /* display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 60%;
-  justify-content: flex-end; */
 }
 
 .tweet-profile-img {
@@ -91,7 +86,6 @@ body {
   border: none;
   border-top: 1px solid black;
   background: transparent;
-  /* margin: 0 1em 0 1em; */
   display: flex;
   justify-content: space-between;
 }
@@ -114,10 +108,8 @@ body {
 
  /* Laptops / Desktops: minimum width of 1024px */
  @media only screen and (min-width: 1024px) {
-  /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
 
   .container {
-    /* display: none; */
     align-items: flex-end;
     margin-top: 120px;
     width: 100%;

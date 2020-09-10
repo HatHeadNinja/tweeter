@@ -6,7 +6,7 @@ Hello, I have commented some notes in my code, but this is a better place for th
 
 I really wanted to DRY up some code and make it more modular, particularly client.js and composer-char-counter, by moving all the repetitive functions setting element properties and css to a helper file but am late submitting this project so alas, can't afford any time to do right now. I'd also like to spend a some time ordering CSS elements across the files. But, alas, again, out of time.
 
-I do plan to come back to this project because the US requirements are sub-standard and if I am to show potential employers, these shortcomings must be addressed first.
+I do plan to come back to this project because the UX requirements are sub-standard and if I am to show potential employers, these shortcomings must be addressed first.
 
 These UX shortcomings include:
 * Use of red in nav for animated arrows. Red is for errors. Studies demonstrate that orange is the top performing CTA colour

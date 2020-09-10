@@ -9,6 +9,9 @@ $(document).ready(function() {
   // so alas, can't afford any time to do. I'd also like to spend a some time
   // ordering CSS elements across the files. But, alas, again!
 
+
+  // V2: review charCount declarations.  const or let?
+
    
   $('#tweet-text').on('blur', function() {
     let charCount = $(this).val().length;
