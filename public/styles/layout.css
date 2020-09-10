@@ -40,7 +40,7 @@ body {
 
 .tweet header {
   display: flex;
-  background-color: #f4f1ec;
+  /* background-color: #f4f1ec; */
   justify-content: space-between;
   height: auto;
   align-items: flex-start;
@@ -68,12 +68,16 @@ body {
   color: lightgray;
 }
 
+.tweet:hover {
+  background-color: ghostwhite;
+}
+
 .tweet .user-handle {
-  color: lightgray
+  color: darkgray;
 }
 
 .tweet p {
-  background-color: #f4f1ec;
+  /* background-color: #f4f1ec; */
   font-family: 'source sans pro', cursive;
   color: dimgray;
 }
@@ -102,9 +106,9 @@ body {
   font-size: 14px;
 }
 
-.tweet .tweet-icons:hover {
-  color: #4056A1;
-}
+/* .tweet .tweet-icons:hover {
+  color: lightblue;
+} */
 
  /* Laptops / Desktops: minimum width of 1024px */
  @media only screen and (min-width: 1024px) {
@@ -113,7 +117,6 @@ body {
     align-items: flex-end;
     margin-top: 120px;
     width: 100%;
-    
   }
 
   #tweets {
