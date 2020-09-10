@@ -53,7 +53,7 @@ $(document).ready(function() {
       $('#new-tweet-button').prop("disabled", false);
       $('#new-tweet-button').css("background-color", "grey");
       alerted = true;
-      errorMsg('WHOA! Too many characters! Conciseness is the new cool!');
+      errorMsg('Too many characters! Say more with less...');
 
     } else if (charCount > 140) {
       charCount = 140 - charCount;
@@ -65,9 +65,14 @@ $(document).ready(function() {
       $('#error').css("display","flex");
       $('tweet-text').css("border-bottom", "1px solid red");
     }
+
+    else {
+      // catch block for errors
+      errorMsg('Something has gone wrong - please shake the Internet!');
+    }
   });
+
   function errorMsg(errMsg) {
-    // console.log('errMsg',errMsg);
     if ($("#error").first().is(":hidden")) {
       $('#error').css("display","flex");
       $("#error").slideDown("slow");
