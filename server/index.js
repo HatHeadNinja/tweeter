@@ -2,10 +2,10 @@
 
 const express       = require("express");
 const bodyParser    = require("body-parser");
+const moment        = require("moment");
 const db            = require("./lib/in-memory-db");
 const DataHelpers   = require("./lib/data-helpers.js")(db);
 const tweetsRoutes  = require("./routes/tweets")(DataHelpers);
-const moment        = require("moment");
 
 const PORT          = 8080;
 const app           = express();
