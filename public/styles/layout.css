@@ -40,7 +40,7 @@ body {
   
 .tweet:hover {
   background-color: ghostwhite;
-  box-shadow: 2px 2px;
+  box-shadow: 4px 4px;
 }
 
 .tweet header {
@@ -114,7 +114,7 @@ body {
   font-size: 14px;
 }
 
-.tweet .tweet-icons:hover {
+.tweet .tweet-icons span:hover {
   color: darkblue;
 }
 
