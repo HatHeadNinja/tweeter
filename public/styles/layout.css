@@ -70,6 +70,7 @@ body {
 
 .tweet:hover {
   background-color: ghostwhite;
+  border: 2px solid black;
 }
 
 .tweet .user-handle {
