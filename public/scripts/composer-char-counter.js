@@ -10,15 +10,13 @@ $(document).ready(function() {
   // ordering CSS elements across the files. But, alas, again!
 
 
-  // V2: review charCount declarations.  const or let?
-
-   
+  // V2: review charCount declarations.  const or let? or, nothing at all?
   $('#tweet-text').on('blur', function() {
-    let charCount = $(this).val().length;
+    const charCount = $(this).val().length;
   });
 
   $('#tweet-text').on('change', function() {
-    let charCount = $(this).val().length;
+    const charCount = $(this).val().length;
   });
 
   $('#tweet-text').on('keyup', function() {
@@ -32,35 +30,29 @@ $(document).ready(function() {
       $('.counter').css("color", "darkgray");
       
     } else if (charCount > 0 && charCount < 140) {
-      $('.counter').val(charCount + ' / 140');
-      $('.counter').css("color", "darkgray");
       alerted = false;
+      $('.counter').val(charCount + ' / 140');
       $('#new-tweet-button').prop("disabled", false);
+      $('.counter').css("color", "darkgray");
       $('#new-tweet-button').css("background-color", "#4056A1");
       $('#tweet-label').css("display", "flex");
       $('#error').css("display","none");
 
-    } else if (charCount > 120 && charCount < 140) {
-      $('.counter').css("color", "darkgoldenrod");
-      $('.counter').val(charCount + ' / 140');
-      $('#tweet-label').css("display", "flex");
-      $('#error').css("display","none");
-
     } else if (charCount === 140 && alerted === false) {
-      $('.counter').css("color", "crimson");
-      $('#tweet-label').css("display", "none");
-      $('.counter').val(charCount + ' / 140');
-      $('#new-tweet-button').prop("disabled", false);
-      $('#new-tweet-button').css("background-color", "grey");
       alerted = true;
+      $('.counter').val(charCount + ' / 140');
+      $('.counter').css("color", "crimson");
+      $('#new-tweet-button').prop("disabled", false);
+      $('#tweet-label').css("display", "none");
+      $('#new-tweet-button').css("background-color", "grey");
       errorMsg('Too many characters! Say more with less...');
 
     } else if (charCount > 140) {
       charCount = 140 - charCount;
-      $('#tweet-label').css("display", "none");
       $('.counter').val(charCount + ' / 140');
-      $('.counter').css("color", "crimson");
       $('#new-tweet-button').prop("disabled", true);
+      $('#tweet-label').css("display", "none");
+      $('.counter').css("color", "crimson");
       $('#new-tweet-button').css("background", "grey");
       $('#error').css("display","flex");
       $('tweet-text').css("border-bottom", "1px solid red");
