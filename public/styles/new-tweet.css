@@ -1,3 +1,9 @@
+.overflow {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
 .new-tweet form {
   display: flex;
   flex-direction: column;

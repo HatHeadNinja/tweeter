@@ -11,16 +11,19 @@ $(document).ready(function() {
 
 
   // V2: review charCount declarations.  const or let? or, nothing at all?
-  $('#tweet-text').on('blur', function() {
+  $('#tweet-text').on('keydown', function() {
     const charCount = $(this).val().length;
+    console.log('KEYDOWN charCount:', charCount);
   });
 
   $('#tweet-text').on('change', function() {
     const charCount = $(this).val().length;
+    console.log('CHANGE charCount:', charCount);
   });
 
   $('#tweet-text').on('keyup', function() {
     let charCount = $(this).val().length;
+    console.log('KEYUP charCount:', charCount);
     if (charCount === 0) {
       $('.counter').val('0 / 140');
       $('#new-tweet-button').prop("disabled", true);
@@ -67,7 +70,7 @@ $(document).ready(function() {
   function errorMsg(errMsg) {
     if ($("#error").first().is(":hidden")) {
       $('#error').css("display","flex");
-      $("#error").slideDown("slow");
+      // $("#error").slideDown("slow");
       $("#error").val(errMsg);
     } else {
       $("#error").hide();

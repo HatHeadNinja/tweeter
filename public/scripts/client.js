@@ -29,7 +29,7 @@ $(() => {
             <h3>${tweet.user.name}</h3>
             <p class="user-handle">${tweet.user.handle}</p>
           </div>
-          <p class='tweet-section'>${escape(tweet.content.text)}</p>
+          <p class='tweet-section .overflow'>${escape(tweet.content.text)}</p>
           <footer>
             <p>${moment(tweet.created_at).toNow(true)} ago</p>
             <div class="tweet-icons"><span class="fa fa-flag"></span>
