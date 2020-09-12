@@ -51,7 +51,7 @@ $(document).ready(function() {
     
     // catch block for ajax
     } else {
-      console.error('ERROR: invalid charCount in composer-char-counter.js');
+      console.error('ERROR: invalid charCount or other problem in composer-char-counter.js');
     }
   }
   
