@@ -63,15 +63,14 @@
   margin-bottom: 0px;
 }
 
-#counter {    
+.counter {    
   font-family: "Bungee", sans-serif;
   color: darkgray;
 }
 
-#counter-error {
+.error {
   color: crimson;
 }
-
 
  /* Laptops / Desktops: minimum width of 1024px */
  @media only screen and (min-width: 1024px) {
