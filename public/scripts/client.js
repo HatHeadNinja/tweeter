@@ -21,7 +21,7 @@ $(() => {
  
   // create HTML with tweet data
   const createTweetElement = function(tweet) {
-    console.log('createTweetElement tweet:', tweet);
+    // console.log('createTweetElement tweet:', tweet);
     const $tweet = $(`
       <article class="tweet">
           <div class='tweet-profile'>
