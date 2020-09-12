@@ -1,8 +1,5 @@
 $(document).ready(function() {
 
-  // used for error messaging
-  let alerted;
-
   // Processes tweet character length passed from the tweet input listeners
   const charCounter = function (charCount) {
     
@@ -17,7 +14,6 @@ $(document).ready(function() {
       $('#error').css("display","none");
     
     } else if (charCount > 0 && charCount < 141) {
-      alerted = false;
       $('.counter').val(charCount + ' / 140');
       // trying to change the class instead of style but can't make it work!
       // $('.counter').className = 'counter';
@@ -27,8 +23,7 @@ $(document).ready(function() {
       $('#tweet-label').css("display", "flex");
       $('#error').css("display","none");
 
-    } else if (charCount === 141 && alerted === false) {
-      alerted = true;
+    } else if (charCount === 141) {
       charCount = 140 - charCount;
       $('.counter').val(charCount + ' / 140');
       $('.counter').css("color", "crimson");
