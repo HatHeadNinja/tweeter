@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // used during error messaging states
+  // used for error messaging states
   let alerted;
 
   // Processes tweet character length passed from the tweet input listeners
