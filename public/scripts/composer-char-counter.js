@@ -30,9 +30,9 @@ $(document).ready(function() {
     } else if (charCount === 141 && alerted === false) {
       alerted = true;
       $('.counter').val(charCount + ' / 140');
-      $('.counter').css("color", "crimson");
       // trying to change the class instead of style but can't make it work!
       // $('.counter').className = 'error';
+      $('.counter').css("color", "crimson");
       $('#new-tweet-button').prop("disabled", true);
       $('#new-tweet-button').css("background-color", "grey");
       $('#tweet-label').css("display", "none");
