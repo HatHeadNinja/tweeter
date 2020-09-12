@@ -6,6 +6,7 @@ header {
   justify-content: center;
   font-family: 'Source Sans Pro', sans-serif;
   color: white;
+  text-align: center;
   background-color: orange;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */;
@@ -16,9 +17,9 @@ header img {
   margin-top: 4%;
 }
 
-header .avatar-name {
+/* header .avatar-name {
   text-align: center;
-}
+} */
 
 header #account-name h2 {
   font-weight: normal;

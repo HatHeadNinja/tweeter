@@ -45,7 +45,6 @@ body {
 
 .tweet header {
   display: flex;
-  /* background-color: #f4f1ec; */
   justify-content: space-between;
   height: auto;
   align-items: flex-start;
@@ -128,8 +127,8 @@ body {
   }
 
   #tweets {
-    width: 72%;
-    margin-right: 10px;
+    width: 74%;
+    margin-right: 20px;
   }
 
 }

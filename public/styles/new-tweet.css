@@ -77,9 +77,9 @@
  @media only screen and (min-width: 1024px) {
   /* Write CSS rules that target Laptop/Desktop screen sizes and beyond */
   .new-tweet {
-    width: 72%;
+    width: 73%;
     margin-bottom: 40px;
-    margin-right: 10px;
+    margin-right: 20px;
   }
 
   #counter {

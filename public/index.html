@@ -25,17 +25,7 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-
-    <!-- <script>
-      $( document ).ready(function() {
-          console.log( "document loaded" );
-      });
    
-      $( window ).on( "load", function() {
-          console.log( "window loaded" );
-      });
-      </script> -->
-    
   </head>
   <body>
     <!-- Top nav bar (fixed) -->
@@ -61,11 +51,11 @@
         <div id="error"><div class="fas fa-exclamation-circle"></div>&nbsp More than 140 characters! Try saying more with less...</div>
         <form>
           <label id="tweet-label" for="tweet-text">What are you humming about?</label>
-          <input 
-            type="textarea" 
+          <textarea 
+            rows=2 
             name="text" 
             id="tweet-text" 
-            >
+            ></textarea>
             <hr>
           </input>
           <div>
