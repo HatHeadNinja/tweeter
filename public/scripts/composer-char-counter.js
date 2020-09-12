@@ -48,6 +48,10 @@ $(document).ready(function() {
       $('#tweet-label').css("display", "none");
       $('tweet-text').css("border-bottom", "1px solid red");
       $('#error').css("display","flex");
+    
+    // catch block for ajax
+    } else {
+      console.error('ERROR: invalid charCount in composer-char-counter.js');
     }
   }
   
