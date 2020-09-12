@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // used for error messaging states
+  // used during error messaging states
   let alerted;
 
   // Processes tweet character length passed from the tweet input listeners
@@ -29,13 +29,15 @@ $(document).ready(function() {
 
     } else if (charCount === 141 && alerted === false) {
       alerted = true;
+      charCount = 140 - charCount;
       $('.counter').val(charCount + ' / 140');
+      $('.counter').css("color", "crimson");
       // trying to change the class instead of style but can't make it work!
       // $('.counter').className = 'error';
-      $('.counter').css("color", "crimson");
       $('#new-tweet-button').prop("disabled", true);
       $('#new-tweet-button').css("background-color", "grey");
       $('#tweet-label').css("display", "none");
+      $('#error').css("display","flex");
 
     } else if (charCount > 141) {
       charCount = 140 - charCount;
