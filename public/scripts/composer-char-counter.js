@@ -2,9 +2,6 @@ $(document).ready(function() {
 
   // used during error messaging states
   let alerted;
-  
-  // DEAR EVALUATOR PERSON
-  // ======================
 
   // Processes tweet character length passed from the tweet input listeners
   const charCounter = function (charCount) {
