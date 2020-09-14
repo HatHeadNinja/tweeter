@@ -80,7 +80,7 @@ body {
 
 .tweet p {
   font-family: 'source sans pro', cursive;
-  color: dimgray;
+  color: rgb(162, 162, 162);
 }
 
 .tweet-profile-img {
