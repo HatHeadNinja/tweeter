@@ -25,7 +25,7 @@ nav {
 }
 
 nav i {
-  color: red;
+  color: greenyellow;
 }
 
 nav div {
@@ -70,5 +70,8 @@ nav p {
     display: flex;
     font-size: xx-large;
     background-color: #4056A1;
+  }
+  nav i {
+    color: orange;
   }
 }

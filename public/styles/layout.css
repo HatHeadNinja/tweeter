@@ -76,16 +76,8 @@ body {
   color: lightgray;
 }
 
-.tweet .tweet-profile h3:hover {
-  color: darkblue;
-}
-
 .tweet .user-handle {
   color: darkgray;
-}
-
-.tweet .tweet-profile .user-handle:hover {
-  color: darkblue;
 }
 
 .tweet p {
@@ -119,6 +111,10 @@ body {
 
 .tweet .tweet-icons span:hover {
   color: darkblue;
+}
+
+.fa {
+  padding-left: 10px;
 }
 
  /* Laptops / Desktops: minimum width of 1024px */
