@@ -21,6 +21,7 @@ nav {
   position: sticky;
   top: 0;
   cursor: default;
+  opacity: 100%;
   background-image: url("https://www.transparenttextures.com/patterns/45-degree-fabric-light.png");
 }
 
