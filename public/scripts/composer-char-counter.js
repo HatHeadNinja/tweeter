@@ -1,9 +1,9 @@
 $(document).ready(function() {
 
   // process tweet character length passed from the tweet input listeners
-  const charCounter = function (charCount) {
+  const charCounter = function(charCount) {
     
-    if (charCount === 0){
+    if (charCount === 0) {
       $('.counter').val('0 / 140');
       // trying to change the class instead of style, can't make it work!
       // $('.counter').className = 'new-tweet div button';
@@ -38,7 +38,7 @@ $(document).ready(function() {
     } else {
       console.error('ERROR: invalid charCount or other problem in composer-char-counter.js');
     }
-  }
+  };
   
   // capture events in the tweet input and send tweet length to charCounter function
   $('#tweet-text').on('keydown', function() {
