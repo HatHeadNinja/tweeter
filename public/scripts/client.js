@@ -64,6 +64,7 @@ $(() => {
       });
   });
 
+  // set focus to tweet input when user clicks 'Write a new tweet'
   $('.compose-tweet').click(function()  {
     $('#tweet-text').focus();
   });
