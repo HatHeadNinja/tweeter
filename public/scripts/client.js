@@ -60,7 +60,7 @@ $(() => {
       .then((tweet) => {
         loadTweets();
         $('#tweet-text').val('').focus();
-        $('#counter').val('140');
+        $('#counter').val('0 / 140');
         $('#new-tweet-button').prop("disabled", true);
         $('#new-tweet-button').css("background-color", "grey");
       });
