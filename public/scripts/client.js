@@ -64,6 +64,11 @@ $(() => {
       });
   });
 
+  $('.compose-tweet').click(function()  {
+    $('#tweet-text').focus();
+  });
+  
+
   loadTweets();
 
 });
