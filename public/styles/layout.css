@@ -37,11 +37,14 @@ body {
   margin: 2rem 0 2rem 0;
   border: 1px solid black;
   padding: 20px;
+  opacity: 80%;
 }
   
 .tweet:hover {
   background-color: ghostwhite;
   box-shadow: 4px 4px;
+  opacity: 100%;
+  color: #545149;
 }
 
 .tweet header {
