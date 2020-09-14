@@ -37,7 +37,7 @@ $(document).ready(function() {
     
     // catch block for ajax
     } else {
-      $('.counter').val(charCount + ' / 140');
+      $('.counter').val('ERROR!');
       $('.counter').css("color", "crimson");
       // trying to change the class instead of style but can't make it work!
       // $('.counter').className = 'error';
@@ -45,7 +45,7 @@ $(document).ready(function() {
       $('#new-tweet-button').css("background-color", "grey");
       $('#tweet-label').css("display", "none");
       $('#error').css("display","flex");
-      $('#error-msg').val("&nbsp The Internet is broken! Give it a shake!");
+      $('#error-msg').val("&nbsp Something is broken! Give it a shake!");
     }
   };
   
