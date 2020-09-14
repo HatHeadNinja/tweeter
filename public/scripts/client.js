@@ -5,6 +5,7 @@
  */
 $(() => {
 
+  // escape text to prevent malicious input
   const escape =  function(str) {
     let div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -48,6 +49,7 @@ $(() => {
       });
   };
 
+  // submit new tweet form
   const $form = $('.new-tweet form');
   $form.on('submit', (event) => {
     event.preventDefault();
