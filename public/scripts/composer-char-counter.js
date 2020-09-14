@@ -33,10 +33,19 @@ $(document).ready(function() {
       $('#new-tweet-button').css("background-color", "grey");
       $('#tweet-label').css("display", "none");
       $('#error').css("display","flex");
+      $('#error-msg').val("&nbsp More than 140 characters! Try saying more with less...");
     
     // catch block for ajax
     } else {
-      console.error('ERROR: invalid charCount or other problem in composer-char-counter.js');
+      $('.counter').val(charCount + ' / 140');
+      $('.counter').css("color", "crimson");
+      // trying to change the class instead of style but can't make it work!
+      // $('.counter').className = 'error';
+      $('#new-tweet-button').prop("disabled", true);
+      $('#new-tweet-button').css("background-color", "grey");
+      $('#tweet-label').css("display", "none");
+      $('#error').css("display","flex");
+      $('#error-msg').val("&nbsp The Internet is broken! Give it a shake!");
     }
   };
   
