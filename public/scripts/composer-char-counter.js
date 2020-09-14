@@ -23,7 +23,7 @@ $(document).ready(function() {
       $('#tweet-label').css("display", "flex");
       $('#error').css("display","none");
 
-    } else if (charCount === 141) {
+    } else if (charCount >= 141) {
       charCount = 140 - charCount;
       $('.counter').val(charCount + ' / 140');
       $('.counter').css("color", "crimson");
@@ -32,18 +32,6 @@ $(document).ready(function() {
       $('#new-tweet-button').prop("disabled", true);
       $('#new-tweet-button').css("background-color", "grey");
       $('#tweet-label').css("display", "none");
-      $('#error').css("display","flex");
-
-    } else if (charCount > 141) {
-      charCount = 140 - charCount;
-      $('.counter').val(charCount + ' / 140');
-      // trying to change the class instead of style but can't make it work!
-      // $('.counter').className = 'error';
-      $('.counter').css("color", "crimson");
-      $('#new-tweet-button').prop("disabled", true);
-      $('#new-tweet-button').css("background", "grey");
-      $('#tweet-label').css("display", "none");
-      $('tweet-text').css("border-bottom", "1px solid red");
       $('#error').css("display","flex");
     
     // catch block for ajax
