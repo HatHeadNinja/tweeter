@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // Processes tweet character length passed from the tweet input listeners
+  // process tweet character length passed from the tweet input listeners
   const charCounter = function (charCount) {
     
     if (charCount === 0){
@@ -52,7 +52,7 @@ $(document).ready(function() {
     }
   }
   
-  // Capture events in the tweet input and send tweet length to charCounter function
+  // capture events in the tweet input and send tweet length to charCounter function
   $('#tweet-text').on('keydown', function() {
     const charCount = $(this).val().length;
     charCounter(charCount);
