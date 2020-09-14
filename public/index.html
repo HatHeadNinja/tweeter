@@ -20,12 +20,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/8e24f3e713.js" crossorigin="anonymous"></script>
-
-    <!-- QUESTION: should this be at the bottom on this file? -->
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
-   
   </head>
   <body>
     <!-- Top nav bar (fixed) -->
@@ -38,13 +32,12 @@
     </nav>
     <header>
       <div class='avatar'>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <div id='account-name'>
-          <h2><b>Amy</b> Mansell</h2>
+        <h2><b>Amy</b> Mansell</h2>
       </div>
     </header>
-
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
@@ -52,25 +45,28 @@
         <form>
           <label id="tweet-label" for="tweet-text">What are you humming about?</label>
           <textarea 
-            rows=2 
-            name="text" 
-            id="tweet-text"
-            autofocus 
-            ></textarea>
-            <hr>
-          </input>
-          <div>
-            <button id="new-tweet-button" type="submit" disabled>Tweet</button>
-            <output
-              id="counter" 
-              name="counter" 
-              class="counter" 
-              for="tweet-text">0 / 140
-            </output>
-          </div>
-        </form>
+          rows=2 
+          name="text" 
+          id="tweet-text"
+          autofocus 
+          ></textarea>
+          <hr>
+        </input>
+        <div>
+          <button id="new-tweet-button" type="submit" disabled>Tweet</button>
+          <output
+            id="counter" 
+            name="counter" 
+            class="counter" 
+            for="tweet-text">0 / 140
+          </output>
+        </div>
+      </form>
       </section>
       <div id="tweets"></div>
     </main>
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </body>
 </html>
