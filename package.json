@@ -15,8 +15,7 @@
     "chance": "^1.0.2",
     "express": "^4.17.1",
     "md5": "^2.1.0",
-    "moment": "^2.27.0",
-    "moment-timezone": "^0.5.31"
+    "moment": "^2.27.0"
   },
   "devDependencies": {
     "chai": "^4.2.0",
