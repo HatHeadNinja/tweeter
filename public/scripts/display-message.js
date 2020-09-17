@@ -21,6 +21,7 @@ function okMessage(message, charCount) {
 function errorMessage (message, charCount) {
   $('#error-msg').text(message);
   $('.counter').val(charCount + ' / 140');
+  $('#tweet-text').focus();
   $('#new-tweet-button').prop("disabled", true);
   $('#new-tweet-button').css("background-color", "grey");
   $('#tweet-label').css("display", "none");
