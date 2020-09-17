@@ -14,7 +14,7 @@ $(document).ready(function() {
   // catch block for ajax
   } else {
     errorMessage('Something is broken! Give it a shake!', charCount);
-    }
+  }
   };
   
   // capture events in the tweet input and send tweet length to charCounter function
