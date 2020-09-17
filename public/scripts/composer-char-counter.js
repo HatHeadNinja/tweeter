@@ -1,6 +1,7 @@
 $(document).ready(function() {
   
   // process tweet character length passed from the tweet input listeners
+  // user messages are processed in ./display-messages.js
   const charCounter = function(charCount) {
   
   if (charCount < 141) {
