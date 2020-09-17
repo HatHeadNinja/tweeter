@@ -55,12 +55,15 @@
 .new-tweet #error {
   display: none;
   color: red;
-  border: 1px none red;
   justify-content: flex-start;
   padding: 0;
   border: 1px none;
   background-color: #f4f1ec;
   margin-bottom: 0px;
+}
+
+.new-tweet #error-msg {
+  margin-left: 10px;
 }
 
 .counter {    

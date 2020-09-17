@@ -53,17 +53,22 @@ $(() => {
   const $form = $('.new-tweet form');
   $form.on('submit', (event) => {
     event.preventDefault();
-    $("#tweet-text").text($form);
-    const serialized = $form.serialize();
     
-    $.post(`/tweets`, serialized)
-      .then((tweet) => {
-        loadTweets();
-        $('#tweet-text').val('').focus();
-        $('#counter').val('0 / 140');
-        $('#new-tweet-button').prop("disabled", true);
-        $('#new-tweet-button').css("background-color", "grey");
-      });
+    const charCount = $("#tweet-text").val().length;
+    
+    if (charCount === 0) {
+      errorMessage('Cannot post an empty tweet! Say something...', 0);
+    } else {
+      $("#tweet-text").text($form);
+      const serialized = $form.serialize();
+      
+      $.post(`/tweets`, serialized)
+        .then((tweet) => {
+          $('#tweet-text').val('').focus();
+          okMessage('What are you humming about?', 0)
+          loadTweets();
+        });
+    }
   });
 
   // set focus to tweet input when user clicks 'Write a new tweet'

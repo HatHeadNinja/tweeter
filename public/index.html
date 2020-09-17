@@ -41,7 +41,7 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <div id="error"><div class="fas fa-exclamation-circle"></div><div id="error-msg">&nbsp More than 140 characters! Try saying more with less...</div></div>
+        <div id="error"><div class="fas fa-exclamation-circle"></div><div id="error-msg"></div></div>
         <form>
           <label id="tweet-label" for="tweet-text">What are you humming about?</label>
           <textarea 
@@ -53,7 +53,7 @@
           <hr>
         </input>
         <div>
-          <button id="new-tweet-button" type="submit" disabled>Tweet</button>
+          <button id="new-tweet-button" type="submit">Tweet</button>
           <output
             id="counter" 
             name="counter" 
@@ -68,5 +68,6 @@
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/display-message.js"></script>
   </body>
 </html>

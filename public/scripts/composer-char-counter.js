@@ -1,51 +1,18 @@
 $(document).ready(function() {
-
+  
   // process tweet character length passed from the tweet input listeners
   const charCounter = function(charCount) {
-    
-    if (charCount === 0) {
-      $('.counter').val('0 / 140');
-      // trying to change the class instead of style, can't make it work!
-      // $('.counter').className = 'new-tweet div button';
-      $('.counter').css("color", "darkgray");
-      $('#new-tweet-button').prop("disabled", true);
-      $('#new-tweet-button').css("background-color", "grey");
-      $('#tweet-label').css("display", "flex");
-      $('#error').css("display","none");
-    
-    } else if (charCount > 0 && charCount < 141) {
-      $('.counter').val(charCount + ' / 140');
-      // trying to change the class instead of style but can't make it work!
-      // $('.counter').className = 'counter';
-      $('.counter').css("color", "darkgray");
-      $('#new-tweet-button').prop("disabled", false);
-      $('#new-tweet-button').css("background-color", "#4056A1");
-      $('#tweet-label').css("display", "flex");
-      $('#error').css("display","none");
+  
+  if (charCount < 141) {
+    okMessage('What are you humming about?', charCount);
 
-    } else if (charCount >= 141) {
-      charCount = 140 - charCount;
-      $('.counter').val(charCount + ' / 140');
-      $('.counter').css("color", "crimson");
-      // trying to change the class instead of style but can't make it work!
-      // $('.counter').className = 'error';
-      $('#new-tweet-button').prop("disabled", true);
-      $('#new-tweet-button').css("background-color", "grey");
-      $('#tweet-label').css("display", "none");
-      $('#error').css("display","flex");
-      $('#error-msg').val("&nbsp More than 140 characters! Try saying more with less...");
-    
-    // catch block for ajax
-    } else {
-      $('.counter').val('ERROR!');
-      $('.counter').css("color", "crimson");
-      // trying to change the class instead of style but can't make it work!
-      // $('.counter').className = 'error';
-      $('#new-tweet-button').prop("disabled", true);
-      $('#new-tweet-button').css("background-color", "grey");
-      $('#tweet-label').css("display", "none");
-      $('#error').css("display","flex");
-      $('#error-msg').val("&nbsp Something is broken! Give it a shake!");
+  } else if (charCount >= 141) {
+    charCount = 140 - charCount;
+    errorMessage('More than 140 characters! Try saying more with less...', charCount);
+  
+  // catch block for ajax
+  } else {
+    errorMessage('Something is broken! Give it a shake!', charCount);
     }
   };
   
